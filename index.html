@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konju Language Documentation</title>
+    <title>Learn Konju - Complete Language Guide</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f5f5;
@@ -23,18 +23,28 @@
 
         h1 {
             color: #333;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            font-size: 2.5em;
         }
 
         h2 {
             color: #667eea;
-            margin-top: 40px;
+            margin-top: 50px;
+            font-size: 2em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
         }
 
         h3 {
             color: #555;
-            margin-top: 25px;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            color: #764ba2;
+            margin-top: 20px;
         }
 
         table {
@@ -52,61 +62,232 @@
         th {
             background: #667eea;
             color: white;
+            font-weight: bold;
         }
 
         tr:nth-child(even) {
             background: #f9f9f9;
         }
 
+        tr:hover {
+            background: #f0f4ff;
+        }
+
         .example {
             background: #f0f4ff;
             border-left: 4px solid #667eea;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
 
         .note {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .tip {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
 
         code {
             background: #f4f4f4;
-            padding: 2px 6px;
+            padding: 3px 8px;
             border-radius: 3px;
             font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        .step-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .lesson {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .practice {
+            background: #e1f5fe;
+            border: 2px solid #03a9f4;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
         }
 
         .alphabet-img {
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
             border: 2px solid #ddd;
             border-radius: 5px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        details {
             margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #667eea;
+            padding: 10px;
+        }
+
+        summary:hover {
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .converter-box {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        .result {
+            background: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-size: 1.2em;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Konju Language Documentation</h1>
+        <h1>📚 Learn Konju - Complete Language Course</h1>
         
-        <p><strong>Konju</strong> is a constructed language with a unique geometric alphabet and a cipher-based vocabulary system.</p>
+        <p style="font-size: 1.2em;"><strong>Konju</strong> is a constructed language with a geometric writing system and systematic cipher-based vocabulary. This guide will teach you everything you need to become fluent!</p>
+
+        <div class="toc">
+            <h3>📖 Table of Contents</h3>
+            <a href="#lesson1">Lesson 1: The Two Writing Systems</a>
+            <a href="#lesson2">Lesson 2: The Cipher System (Most Important!)</a>
+            <a href="#lesson3">Lesson 3: Basic Grammar & Word Order</a>
+            <a href="#lesson4">Lesson 4: Particles (The Building Blocks)</a>
+            <a href="#lesson5">Lesson 5: Verb Forms & Tenses</a>
+            <a href="#lesson6">Lesson 6: Word Formation & Derivation</a>
+            <a href="#lesson7">Lesson 7: Building Sentences</a>
+            <a href="#lesson8">Lesson 8: Common Vocabulary</a>
+            <a href="#practice">Practice Exercises</a>
+            <a href="#reference">Quick Reference Guide</a>
+        </div>
 
         <hr>
 
-        <h2>1. The Konju Alphabet</h2>
-        
-        <p>Konju has <strong>26 letters</strong>: 24 standard letters plus 2 special characters.</p>
+        <h2 id="lesson1">📝 Lesson 1: The Two Writing Systems</h2>
+
+        <p>Konju has TWO ways to write, just like Japanese has Hiragana/Katakana and Romaji!</p>
+
+        <h3>System 1: Konju Script (Primary)</h3>
+        <ul>
+            <li><strong>26 unique geometric characters</strong></li>
+            <li>Beautiful, artistic, cultural identity</li>
+            <li>Used for formal writing and aesthetics</li>
+            <li>Takes time to master but looks amazing!</li>
+        </ul>
 
         <div class="note">
-            <strong>📷 Alphabet:</strong>
-            <br>
-            <code>&lt;img src="imgs/characters.png" alt="Konju Alphabet" class="alphabet-img"&gt;</code>
+            <strong>📷 The Konju Alphabet:</strong><br>
+            <img src="imgs/characters.png" alt="Konju Alphabet" class="alphabet-img">
         </div>
 
-        <h3>Letters and Sounds</h3>
+        <h3>System 2: Konju Latin (Secondary)</h3>
+        <ul>
+            <li><strong>Uses regular English letters (a-z)</strong></li>
+            <li>Easy to type on any keyboard</li>
+            <li>Perfect for learning and digital communication</li>
+            <li>Writes the SAME words, just different characters</li>
+        </ul>
+
+        <div class="tip">
+            <strong>💡 Learning Tip:</strong> Start with Konju Latin to learn the language quickly, then gradually learn the Konju Script characters for authentic writing!
+        </div>
+
+        <h3>The 26 Letters</h3>
         <table>
             <tr>
                 <th>Letter</th>
@@ -114,43 +295,90 @@
                 <th>Notes</th>
             </tr>
             <tr>
-                <td>a - z</td>
+                <td>a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, x, y, z</td>
                 <td>Same as English</td>
-                <td>24 standard letters (no q, w)</td>
+                <td>24 standard letters (no Q or W in Konju)</td>
             </tr>
             <tr>
-                <td>xeu</td>
-                <td>/ɕy/ (like "shü")</td>
-                <td>Special character</td>
+                <td><strong>xeu</strong></td>
+                <td>/ɕy/ (like "shü" or "xu" in Mandarin)</td>
+                <td>Special character - subject marker particle</td>
             </tr>
             <tr>
-                <td>yae</td>
+                <td><strong>yae</strong></td>
                 <td>/jae/ (like "yay")</td>
-                <td>Special character</td>
+                <td>Special character - future tense marker</td>
             </tr>
         </table>
 
         <hr>
 
-        <h2>2. The Cipher System</h2>
+        <h2 id="lesson2">🔐 Lesson 2: The Cipher System (MOST IMPORTANT!)</h2>
 
-        <p>Konju vocabulary is created by encoding English words using a <strong>Caesar cipher with +5 shift</strong>.</p>
+        <p>This is the KEY to Konju! Instead of memorizing thousands of words, you just need to learn ONE simple rule:</p>
 
-        <h3>How It Works:</h3>
-        <ol>
-            <li>Take an English word</li>
-            <li>Shift each letter forward by 5 positions in the alphabet</li>
-            <li>If you go past Z, wrap around to A</li>
-            <li>Replace Q with KU (since Q isn't in Konju)</li>
-            <li>Write the result using Konju characters</li>
-        </ol>
+        <div class="step-box">
+            <h3>The Golden Rule: +5 Letter Shift</h3>
+            <p><strong>Take any English word → Shift each letter forward by 5 positions → That's the Konju word!</strong></p>
+        </div>
 
-        <h3>Cipher Reference Table:</h3>
+        <h3>Step-by-Step Instructions:</h3>
+
+        <div class="lesson">
+            <h4>Step 1: Write your English word</h4>
+            <p>Example: <strong>CAT</strong></p>
+
+            <h4>Step 2: Shift each letter forward by 5</h4>
+            <ul>
+                <li>C → H (C+5 = H)</li>
+                <li>A → F (A+5 = F)</li>
+                <li>T → Y (T+5 = Y)</li>
+            </ul>
+
+            <h4>Step 3: Write the result</h4>
+            <p><strong>CAT</strong> in Konju = <strong>HFY</strong></p>
+
+            <h4>Step 4: Use Konju Script or Konju Latin</h4>
+            <ul>
+                <li><strong>Konju Latin:</strong> HFY (type with regular keyboard)</li>
+                <li><strong>Konju Script:</strong> (write with geometric characters)</li>
+            </ul>
+        </div>
+
+        <h3>Special Rules:</h3>
+
+        <div class="warning">
+            <h4>⚠️ Rule 1: Wraparound at the end</h4>
+            <p>When you go past Z, wrap back to A:</p>
+            <ul>
+                <li>V → A (V+5: V→W→X→Y→Z→A)</li>
+                <li>W → B (W+5: W→X→Y→Z→A→B)</li>
+                <li>X → C</li>
+                <li>Y → D</li>
+                <li>Z → E</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h4>⚠️ Rule 2: Q becomes KU</h4>
+            <p>Since Konju doesn't have Q or W, when you land on Q during the shift, replace it with <strong>KU</strong></p>
+            <p><strong>Example:</strong> HELLO</p>
+            <ul>
+                <li>H → M</li>
+                <li>E → J</li>
+                <li>L → Q → <strong>KU</strong></li>
+                <li>L → Q → <strong>KU</strong></li>
+                <li>O → T</li>
+            </ul>
+            <p><strong>HELLO</strong> = <strong>MJKUKUT</strong></p>
+        </div>
+
+        <h3>Complete Cipher Reference Table</h3>
         <table>
             <tr>
-                <th>English</th>
-                <th>→</th>
-                <th>Konju</th>
+                <th>English Letter</th>
+                <th>+5 Shift</th>
+                <th>Konju Letter</th>
             </tr>
             <tr><td>A</td><td>→</td><td>F</td></tr>
             <tr><td>B</td><td>→</td><td>G</td></tr>
@@ -180,307 +408,807 @@
             <tr><td>Z</td><td>→</td><td>E (wraps)</td></tr>
         </table>
 
-        <h3>Examples:</h3>
-        
+        <h3>Practice Examples with Full Breakdown:</h3>
+
         <div class="example">
-            <strong>HELLO</strong><br>
-            H → M<br>
-            E → J<br>
-            L → Q → KU<br>
-            L → Q → KU<br>
-            O → T<br>
-            <strong>Result: MJKUKUT</strong>
+            <h4>Example 1: DOG</h4>
+            <p><strong>English:</strong> DOG</p>
+            <p><strong>Breakdown:</strong></p>
+            <ul>
+                <li>D + 5 = I</li>
+                <li>O + 5 = T</li>
+                <li>G + 5 = L</li>
+            </ul>
+            <p><strong>Konju:</strong> ITL</p>
         </div>
 
         <div class="example">
-            <strong>WATER</strong><br>
-            W → B (wraps around)<br>
-            A → F<br>
-            T → Y<br>
-            E → J<br>
-            R → W<br>
-            <strong>Result: BFYJW</strong>
+            <h4>Example 2: WATER</h4>
+            <p><strong>English:</strong> WATER</p>
+            <p><strong>Breakdown:</strong></p>
+            <ul>
+                <li>W + 5 = B (wraparound: W→X→Y→Z→A→B)</li>
+                <li>A + 5 = F</li>
+                <li>T + 5 = Y</li>
+                <li>E + 5 = J</li>
+                <li>R + 5 = W</li>
+            </ul>
+            <p><strong>Konju:</strong> BFYJW</p>
         </div>
 
         <div class="example">
-            <strong>EAT</strong><br>
-            E → J<br>
-            A → F<br>
-            T → Y<br>
-            <strong>Result: JFY</strong>
+            <h4>Example 3: QUESTION</h4>
+            <p><strong>English:</strong> QUESTION</p>
+            <p><strong>Breakdown:</strong></p>
+            <ul>
+                <li>Q + 5 = V → <strong>KU</strong> (Q becomes KU)</li>
+                <li>U + 5 = Z</li>
+                <li>E + 5 = J</li>
+                <li>S + 5 = X</li>
+                <li>T + 5 = Y</li>
+                <li>I + 5 = N</li>
+                <li>O + 5 = T</li>
+                <li>N + 5 = S</li>
+            </ul>
+            <p><strong>Konju:</strong> KUZJXYTS</p>
         </div>
 
-        <div class="example">
-            <strong>GOOD</strong><br>
-            G → L<br>
-            O → T<br>
-            O → T<br>
-            D → I<br>
-            <strong>Result: LTTI</strong>
+        <div class="converter-box">
+            <h3>🔧 Interactive Cipher Converter</h3>
+            <p>Try converting English words to Konju!</p>
+            <input type="text" id="englishInput" placeholder="Type an English word here...">
+            <button onclick="convertToKonju()">Convert to Konju</button>
+            <button onclick="clearConverter()">Clear</button>
+            <div class="result" id="result"></div>
+        </div>
+
+        <script>
+            function convertToKonju() {
+                const input = document.getElementById('englishInput').value.toUpperCase();
+                let result = '';
+                
+                for (let i = 0; i < input.length; i++) {
+                    const char = input[i];
+                    if (char >= 'A' && char <= 'Z') {
+                        let code = char.charCodeAt(0) - 65;
+                        code = (code + 5) % 26;
+                        let newChar = String.fromCharCode(code + 65);
+                        
+                        if (newChar === 'Q' || newChar === 'V') {
+                            result += 'KU';
+                        } else if (newChar === 'W') {
+                            result += 'B';
+                        } else {
+                            result += newChar;
+                        }
+                    } else if (char === ' ') {
+                        result += ' ';
+                    }
+                }
+                
+                document.getElementById('result').textContent = result || 'Enter a word above';
+            }
+
+            function clearConverter() {
+                document.getElementById('englishInput').value = '';
+                document.getElementById('result').textContent = '';
+            }
+        </script>
+
+        <hr>
+
+        <h2 id="lesson3">📐 Lesson 3: Basic Grammar & Word Order</h2>
+
+        <h3>The SOV Pattern</h3>
+        <p>Konju uses <strong>SOV (Subject-Object-Verb)</strong> word order, similar to Japanese and Korean.</p>
+
+        <table>
+            <tr>
+                <th>English (SVO)</th>
+                <th>Konju (SOV)</th>
+            </tr>
+            <tr>
+                <td>I eat food</td>
+                <td>I food eat</td>
+            </tr>
+            <tr>
+                <td>She sees the cat</td>
+                <td>She the cat sees</td>
+            </tr>
+            <tr>
+                <td>We speak Konju</td>
+                <td>We Konju speak</td>
+            </tr>
+        </table>
+
+        <div class="tip">
+            <strong>💡 Memory Trick:</strong> In Konju, the <strong>verb always comes last</strong>!
         </div>
 
         <hr>
 
-        <h2>3. Grammar Structure</h2>
+        <h2 id="lesson4">🔧 Lesson 4: Particles (The Building Blocks)</h2>
 
-        <h3>Word Order: SOV (Subject-Object-Verb)</h3>
-        <p>Unlike English (SVO), Konju follows the pattern: <strong>Subject - Object - Verb</strong></p>
+        <p>Particles are small words that attach to nouns and verbs to show their grammatical function. They're ESSENTIAL in Konju!</p>
 
-        <div class="example">
-            <strong>English:</strong> I eat food<br>
-            <strong>Konju order:</strong> I food eat
-        </div>
-
-        <h3>Grammar Particles</h3>
-        <p>Konju uses particles (suffixes) to mark grammatical relationships:</p>
+        <h3>The 7 Essential Particles</h3>
 
         <table>
             <tr>
                 <th>Particle</th>
                 <th>Function</th>
+                <th>English Equivalent</th>
                 <th>Example</th>
             </tr>
             <tr>
-                <td><strong>xeu</strong></td>
+                <td><strong>-xeu</strong></td>
                 <td>Subject marker</td>
-                <td>na-xeu = "I" (as subject)</td>
+                <td>"[subject]" (the doer)</td>
+                <td>N-xeu = "I" (as subject)</td>
             </tr>
             <tr>
-                <td><strong>y</strong></td>
+                <td><strong>-y</strong></td>
                 <td>Object marker</td>
-                <td>ktti-y = "food" (as object)</td>
+                <td>"[object]" (receiving action)</td>
+                <td>HFY-y = "cat" (as object)</td>
             </tr>
             <tr>
-                <td><strong>o</strong></td>
-                <td>Possessive marker</td>
-                <td>na-o = "my"</td>
+                <td><strong>-o</strong></td>
+                <td>Possessive</td>
+                <td>"'s" or "of"</td>
+                <td>N-o = "my"</td>
             </tr>
             <tr>
-                <td><strong>a</strong></td>
-                <td>Location marker</td>
-                <td>mtzhj-a = "at home"</td>
+                <td><strong>-a</strong></td>
+                <td>Location</td>
+                <td>"at, in, on"</td>
+                <td>MTZHJ-a = "at home"</td>
             </tr>
             <tr>
-                <td><strong>eu</strong></td>
+                <td><strong>-eu</strong></td>
                 <td>Past tense</td>
-                <td>jfy-eu = "ate"</td>
+                <td>"ed" (past)</td>
+                <td>JFY-eu = "ate"</td>
             </tr>
             <tr>
-                <td><strong>yae</strong></td>
+                <td><strong>-yae</strong></td>
                 <td>Future tense</td>
-                <td>jfy-yae = "will eat"</td>
+                <td>"will"</td>
+                <td>JFY-yae = "will eat"</td>
             </tr>
             <tr>
-                <td><strong>i</strong></td>
-                <td>Plural marker</td>
-                <td>hfy-i = "cats"</td>
+                <td><strong>-i</strong></td>
+                <td>Plural</td>
+                <td>"s" (plural)</td>
+                <td>HFY-i = "cats"</td>
+            </tr>
+            <tr>
+                <td><strong>-ju</strong></td>
+                <td>Progressive/Continuous</td>
+                <td>"-ing" (doing now)</td>
+                <td>JFY-ju = "eating"</td>
             </tr>
         </table>
 
+        <div class="note">
+            <h4>📌 How Particles Attach:</h4>
+            <p>Particles are added directly to the end of words with a hyphen:</p>
+            <ul>
+                <li><strong>HFY</strong> (cat) + <strong>-xeu</strong> (subject) = <strong>HFY-xeu</strong> (the cat [as subject])</li>
+                <li><strong>KTTI</strong> (food) + <strong>-y</strong> (object) = <strong>KTTI-y</strong> (food [as object])</li>
+                <li><strong>JFY</strong> (eat) + <strong>-eu</strong> (past) = <strong>JFY-eu</strong> (ate)</li>
+            </ul>
+        </div>
+
+        <h3>Particle Order When Combining</h3>
+
+        <div class="example">
+            <h4>For Nouns: Plural → Case Marker</h4>
+            <p><strong>cats</strong> (as subject) = HFY-<strong>i</strong>-<strong>xeu</strong></p>
+            <p><strong>dogs</strong> (as object) = ITL-<strong>i</strong>-<strong>y</strong></p>
+        </div>
+
+        <div class="example">
+            <h4>For Verbs: Progressive/Tense comes last</h4>
+            <p><strong>was eating</strong> = JFY-<strong>ju</strong>-<strong>eu</strong> (eating + past)</p>
+            <p><strong>will be eating</strong> = JFY-<strong>ju</strong>-<strong>yae</strong> (eating + future)</p>
+        </div>
+
         <hr>
 
-        <h2>4. Word Formation</h2>
+        <h2 id="lesson5">⏰ Lesson 5: Verb Forms & Tenses</h2>
 
-        <h3>Prefixes</h3>
+        <h3>Basic Tense Formation</h3>
+
+        <table>
+            <tr>
+                <th>Tense</th>
+                <th>How to Form</th>
+                <th>Example (EAT)</th>
+                <th>Translation</th>
+            </tr>
+            <tr>
+                <td><strong>Present</strong></td>
+                <td>Base form (no marker)</td>
+                <td>JFY</td>
+                <td>eat / eats</td>
+            </tr>
+            <tr>
+                <td><strong>Past</strong></td>
+                <td>Base + <strong>-eu</strong></td>
+                <td>JFY-eu</td>
+                <td>ate</td>
+            </tr>
+            <tr>
+                <td><strong>Future</strong></td>
+                <td>Base + <strong>-yae</strong></td>
+                <td>JFY-yae</td>
+                <td>will eat</td>
+            </tr>
+            <tr>
+                <td><strong>Progressive (Present)</strong></td>
+                <td>Base + <strong>-ju</strong></td>
+                <td>JFY-ju</td>
+                <td>eating / is eating</td>
+            </tr>
+            <tr>
+                <td><strong>Past Progressive</strong></td>
+                <td>Base + <strong>-ju-eu</strong></td>
+                <td>JFY-ju-eu</td>
+                <td>was eating</td>
+            </tr>
+            <tr>
+                <td><strong>Future Progressive</strong></td>
+                <td>Base + <strong>-ju-yae</strong></td>
+                <td>JFY-ju-yae</td>
+                <td>will be eating</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <h4>All Forms of "GO" (LT)</h4>
+            <ul>
+                <li><strong>LT</strong> = go / goes</li>
+                <li><strong>LT-eu</strong> = went</li>
+                <li><strong>LT-yae</strong> = will go</li>
+                <li><strong>LT-ju</strong> = going / is going</li>
+                <li><strong>LT-ju-eu</strong> = was going</li>
+                <li><strong>LT-ju-yae</strong> = will be going</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 id="lesson6">🏗️ Lesson 6: Word Formation & Derivation</h2>
+
+        <p>You can create thousands of new words by adding prefixes and suffixes to base words!</p>
+
+        <h3>Prefixes (Add to the beginning)</h3>
+
         <table>
             <tr>
                 <th>Prefix</th>
                 <th>Meaning</th>
                 <th>Example</th>
+                <th>Translation</th>
             </tr>
             <tr>
                 <td><strong>fe-</strong></td>
-                <td>opposite, not</td>
-                <td>fe-ltti = bad (not-good)</td>
+                <td>opposite, not, un-</td>
+                <td>fe-LTTI</td>
+                <td>not good = bad</td>
             </tr>
             <tr>
                 <td><strong>re-</strong></td>
                 <td>again, repeat</td>
-                <td>re-jfy = eat again</td>
+                <td>re-JFY</td>
+                <td>eat again</td>
             </tr>
         </table>
 
-        <h3>Suffixes</h3>
+        <h3>Suffixes (Add to the end)</h3>
+
         <table>
             <tr>
                 <th>Suffix</th>
                 <th>Meaning</th>
                 <th>Example</th>
+                <th>Translation</th>
             </tr>
             <tr>
                 <td><strong>-ka</strong></td>
                 <td>person who does</td>
-                <td>jfy-ka = eater, chef</td>
+                <td>JFY-ka</td>
+                <td>eater, chef</td>
             </tr>
             <tr>
                 <td><strong>-lo</strong></td>
-                <td>thing related to</td>
-                <td>jfy-lo = edible thing</td>
+                <td>thing/tool related to</td>
+                <td>JFY-lo</td>
+                <td>edible thing, ingredient</td>
             </tr>
             <tr>
                 <td><strong>-su</strong></td>
                 <td>place where</td>
-                <td>jfy-su = restaurant</td>
+                <td>JFY-su</td>
+                <td>restaurant (eating place)</td>
             </tr>
             <tr>
                 <td><strong>-zi</strong></td>
                 <td>adjective form</td>
-                <td>jfy-zi = edible</td>
+                <td>JFY-zi</td>
+                <td>edible, eatable</td>
             </tr>
         </table>
 
-        <h3>Compound Words</h3>
-        <p>Combine root words to create new meanings:</p>
+        <h3>Building Complex Words</h3>
+
+        <div class="lesson">
+            <h4>Example: From "SPEAK" (XUJFP) to Related Words</h4>
+            <ul>
+                <li><strong>XUJFP</strong> = speak (verb)</li>
+                <li><strong>XUJFP-ka</strong> = speaker, orator (person who speaks)</li>
+                <li><strong>XUJFP-lo</strong> = microphone, speech tool (thing for speaking)</li>
+                <li><strong>XUJFP-su</strong> = auditorium, speaking place</li>
+                <li><strong>XUJFP-zi</strong> = spoken, verbal (adjective)</li>
+                <li><strong>re-XUJFP</strong> = speak again, repeat</li>
+                <li><strong>fe-XUJFP</strong> = not speak, silent</li>
+            </ul>
+        </div>
+
+        <h3>Compound Words (Combining Roots)</h3>
+
+        <p>Create new words by combining two root words together:</p>
+
         <div class="example">
-            <strong>bfyjw</strong> (water) + <strong>mtzhj</strong> (home) = <strong>bfyjwmtzhj</strong> (bathroom)
+            <h4>Pattern: Word1 + Word2 = New Meaning</h4>
+            <ul>
+                <li><strong>BFYJW</strong> (water) + <strong>MTZHJ</strong> (home) = <strong>BFYJWMTZHJ</strong> (bathroom)</li>
+                <li><strong>XJJ</strong> (see) + <strong>-lo</strong> (thing) = <strong>XJJLO</strong> (mirror, seeing-thing)</li>
+                <li><strong>GNL</strong> (big) + <strong>HFY</strong> (cat) = <strong>GNLHFY</strong> (big cat / lion)</li>
+                <li><strong>XRFKUKU</strong> (small) + <strong>ITL</strong> (dog) = <strong>XRFKUKUITL</strong> (puppy)</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            <strong>💡 Word Building Strategy:</strong> Once you know 100 root words and all the prefixes/suffixes, you can create thousands of words!
         </div>
 
         <hr>
 
-        <h2>5. Basic Vocabulary</h2>
+        <h2 id="lesson7">💬 Lesson 7: Building Sentences</h2>
+
+        <h3>The Complete Sentence Formula</h3>
+
+        <div class="step-box">
+            <p style="font-size: 1.3em; text-align: center;">
+                <strong>Subject-xeu + Object-y + Verb(-tense)</strong>
+            </p>
+        </div>
+
+        <h3>Step-by-Step Sentence Construction</h3>
+
+        <div class="lesson">
+            <h4>Example: "I eat food"</h4>
+            
+            <p><strong>Step 1:</strong> Convert each word to Konju</p>
+            <ul>
+                <li>I → N</li>
+                <li>EAT → JFY</li>
+                <li>FOOD → KTTI</li>
+            </ul>
+
+            <p><strong>Step 2:</strong> Rearrange to SOV order</p>
+            <p>English: I eat food</p>
+            <p>Konju order: I food eat</p>
+
+            <p><strong>Step 3:</strong> Add particles</p>
+            <ul>
+                <li>N + <strong>-xeu</strong> (subject marker) = N-xeu</li>
+                <li>KTTI + <strong>-y</strong> (object marker) = KTTI-y</li>
+                <li>JFY (no particle needed for present tense verb)</li>
+            </ul>
+
+            <p><strong>Final Sentence:</strong> <code>N-xeu KTTI-y JFY</code></p>
+            <p><strong>Translation:</strong> "I eat food"</p>
+        </div>
+
+        <h3>More Complex Sentences</h3>
+
+        <div class="example">
+            <h4>"The cat was eating fish at home"</h4>
+            
+            <p><strong>Words:</strong></p>
+            <ul>
+                <li>CAT → HFY</li>
+                <li>EAT → JFY</li>
+                <li>FISH → KNXM</li>
+                <li>HOME → MTZHJ</li>
+            </ul>
+
+            <p><strong>Structure:</strong></p>
+            <p>cat-SUBJECT home-LOCATION fish-OBJECT eating-PAST</p>
+
+            <p><strong>Konju:</strong> <code>HFY-xeu MTZHJ-a KNXM-y JFY-ju-eu</code></p>
+            
+            <p><strong>Breakdown:</strong></p>
+            <ul>
+                <li><strong>HFY-xeu</strong> = the cat (subject)</li>
+                <li><strong>MTZHJ-a</strong> = at home (location)</li>
+                <li><strong>KNXM-y</strong> = fish (object)</li>
+                <li><strong>JFY-ju-eu</strong> = was eating (progressive + past)</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h4>"My dogs will go to the park"</h4>
+            
+            <p><strong>Words:</strong></p>
+            <ul>
+                <li>I → N</li>
+                <li>DOG → ITL</li>
+                <li>GO → LT</li>
+                <li>PARK → UFWP</li>
+            </ul>
+
+            <p><strong>Structure:</strong></p>
+            <p>my dogs-PLURAL-SUBJECT park-LOCATION go-FUTURE</p>
+
+            <p><strong>Konju:</strong> <code>N-o ITL-i-xeu UFWP-a LT-yae</code></p>
+            
+            <p><strong>Breakdown:</strong></p>
+            <ul>
+                <li><strong>N-o</strong> = my (possessive)</li>
+                <li><strong>ITL-i-xeu</strong> = dogs (plural + subject)</li>
+                <li><strong>UFWP-a</strong> = to/at the park (location)</li>
+                <li><strong>LT-yae</strong> = will go (future)</li>
+            </ul>
+        </div>
+
+        <h3>Questions in Konju</h3>
+
+        <p>To make a question, simply change the word order by moving the verb to the beginning:</p>
 
         <table>
             <tr>
-                <th>English</th>
-                <th>Konju Cipher</th>
-                <th>Category</th>
+                <th>Statement</th>
+                <th>Question</th>
             </tr>
-            <tr><td>I</td><td>N</td><td>Pronoun</td></tr>
-            <tr><td>YOU</td><td>DTZ</td><td>Pronoun</td></tr>
-            <tr><td>HE/SHE</td><td>MJ/XMJ</td><td>Pronoun</td></tr>
-            <tr><td>WE</td><td>BJ</td><td>Pronoun</td></tr>
-            <tr><td>THEY</td><td>YMJD</td><td>Pronoun</td></tr>
-            <tr><td>EAT</td><td>JFY</td><td>Verb</td></tr>
-            <tr><td>GO</td><td>LT</td><td>Verb</td></tr>
-            <tr><td>SEE</td><td>XJJ</td><td>Verb</td></tr>
-            <tr><td>SPEAK</td><td>XUJFP</td><td>Verb</td></tr>
-            <tr><td>BE</td><td>GJ</td><td>Verb</td></tr>
-            <tr><td>WATER</td><td>BFYJW</td><td>Noun</td></tr>
-            <tr><td>FOOD</td><td>KTTI</td><td>Noun</td></tr>
-            <tr><td>PERSON</td><td>UJWXTS</td><td>Noun</td></tr>
-            <tr><td>HOME</td><td>MTZHJ</td><td>Noun</td></tr>
-            <tr><td>CAT</td><td>HFY</td><td>Noun</td></tr>
-            <tr><td>DOG</td><td>ITL</td><td>Noun</td></tr>
-            <tr><td>GOOD</td><td>LTTI</td><td>Adjective</td></tr>
-            <tr><td>BAD</td><td>GFI</td><td>Adjective</td></tr>
-            <tr><td>BIG</td><td>GNL</td><td>Adjective</td></tr>
-            <tr><td>SMALL</td><td>XRFKKU</td><td>Adjective</td></tr>
-            <tr><td>YES</td><td>DJX</td><td>Other</td></tr>
-            <tr><td>NO</td><td>ST</td><td>Other</td></tr>
-            <tr><td>HELLO</td><td>MJKUKUT</td><td>Greeting</td></tr>
-            <tr><td>THANK YOU</td><td>YMFSP DTZ</td><td>Phrase</td></tr>
+            <tr>
+                <td>N-xeu KTTI-y JFY<br><em>(I food eat)</em></td>
+                <td>JFY N-xeu KTTI-y?<br><em>(Eat I food? = Do I eat food?)</em></td>
+            </tr>
+            <tr>
+                <td>HFY-xeu BFYJW-y XJJ<br><em>(Cat water sees)</em></td>
+                <td>XJJ HFY-xeu BFYJW-y?<br><em>(See cat water? = Does cat see water?)</em></td>
+            </tr>
+        </table>
+
+        <h3>Negatives in Konju</h3>
+
+        <p>Use the prefix <strong>fe-</strong> on the verb to make it negative:</p>
+
+        <div class="example">
+            <ul>
+                <li><strong>N-xeu KTTI-y JFY</strong> = I eat food</li>
+                <li><strong>N-xeu KTTI-y fe-JFY</strong> = I don't eat food</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 id="lesson8">📚 Lesson 8: Essential Vocabulary</h2>
+
+        <h3>Pronouns</h3>
+        <table>
+            <tr>
+                <th>English</th>
+                <th>Konju</th>
+                <th>Notes</th>
+            </tr>
+            <tr><td>I / me</td><td>N</td><td>-</td></tr>
+            <tr><td>you</td><td>DTZ</td><td>-</td></tr>
+            <tr><td>he</td><td>MJ</td><td>-</td></tr>
+            <tr><td>she</td><td>XMJ</td><td>-</td></tr>
+            <tr><td>it</td><td>NY</td><td>-</td></tr>
+            <tr><td>we</td><td>BJ</td><td>-</td></tr>
+            <tr><td>they</td><td>YMJD</td><td>-</td></tr>
+            <tr><td>this</td><td>YMNX</td><td>-</td></tr>
+            <tr><td>that</td><td>YMFY</td><td>-</td></tr>
+        </table>
+
+        <h3>Common Verbs</h3>
+        <table>
+            <tr>
+                <th>English</th>
+                <th>Konju</th>
+                <th>English</th>
+                <th>Konju</th>
+            </tr>
+            <tr><td>be</td><td>GJ</td><td>have</td><td>MFAJ</td></tr>
+            <tr><td>go</td><td>LT</td><td>come</td><td>HTRJ</td></tr>
+            <tr><td>eat</td><td>JFY</td><td>drink</td><td>IWNSP</td></tr>
+            <tr><td>see</td><td>XJJ</td><td>hear</td><td>MJFW</td></tr>
+            <tr><td>speak</td><td>XUJFP</td><td>say</td><td>XFD</td></tr>
+            <tr><td>know</td><td>PSTB</td><td>think</td><td>YMNSP</td></tr>
+            <tr><td>want</td><td>BFSY</td><td>need</td><td>SJJI</td></tr>
+            <tr><td>give</td><td>LNAJ</td><td>take</td><td>YFPJ</td></tr>
+            <tr><td>make</td><td>RFPJ</td><td>do</td><td>IT</td></tr>
+            <tr><td>get</td><td>LJY</td><td>put</td><td>UZY</td></tr>
+            <tr><td>help</td><td>MJKUU</td><td>work</td><td>BTWP</td></tr>
+            <tr><td>play</td><td>UKUFD</td><td>sleep</td><td>XKUJJU</td></tr>
+            <tr><td>walk</td><td>BFKUP</td><td>run</td><td>WZS</td></tr>
+            <tr><td>sit</td><td>XNY</td><td>stand</td><td>XYFSI</td></tr>
+            <tr><td>read</td><td>WJFI</td><td>write</td><td>BWNYJ</td></tr>
+            <tr><td>open</td><td>TUJS</td><td>close</td><td>HKTXJ</td></tr>
+            <tr><td>love</td><td>KTAJ</td><td>like</td><td>KNPJ</td></tr>
+            <tr><td>buy</td><td>GZD</td><td>sell</td><td>XJKUKU</td></tr>
+        </table>
+
+        <h3>Common Nouns</h3>
+        <table>
+            <tr>
+                <th>English</th>
+                <th>Konju</th>
+                <th>English</th>
+                <th>Konju</th>
+            </tr>
+            <tr><td>person</td><td>UJWXTS</td><td>people</td><td>UJTUKULJ</td></tr>
+            <tr><td>man</td><td>RFS</td><td>woman</td><td>BTRF</td></tr>
+            <tr><td>child</td><td>HMNKUI</td><td>friend</td><td>KWNJSI</td></tr>
+            <tr><td>home</td><td>MTZHJ</td><td>house</td><td>MTZXJ</td></tr>
+            <tr><td>food</td><td>KTTI</td><td>water</td><td>BFYJW</td></tr>
+            <tr><td>cat</td><td>HFY</td><td>dog</td><td>ITL</td></tr>
+            <tr><td>bird</td><td>GNWI</td><td>fish</td><td>KNXM</td></tr>
+            <tr><td>tree</td><td>YWJJ</td><td>flower</td><td>KUKTBJW</td></tr>
+            <tr><td>sun</td><td>XZS</td><td>moon</td><td>RTTS</td></tr>
+            <tr><td>day</td><td>IFD</td><td>night</td><td>SNLMY</td></tr>
+            <tr><td>time</td><td>YNRJ</td><td>year</td><td>DJFW</td></tr>
+            <tr><td>book</td><td>GTTP</td><td>school</td><td>XHMTTKU</td></tr>
+            <tr><td>car</td><td>HFW</td><td>road</td><td>WTFI</td></tr>
+            <tr><td>city</td><td>HNYD</td><td>country</td><td>HTZSYWD</td></tr>
+            <tr><td>world</td><td>BTWKUI</td><td>life</td><td>KNKJ</td></tr>
+            <tr><td>hand</td><td>MFSI</td><td>eye</td><td>JDJ</td></tr>
+            <tr><td>head</td><td>MJFI</td><td>heart</td><td>MJFWY</td></tr>
+        </table>
+
+        <h3>Adjectives</h3>
+        <table>
+            <tr>
+                <th>English</th>
+                <th>Konju</th>
+                <th>English</th>
+                <th>Konju</th>
+            </tr>
+            <tr><td>good</td><td>LTTI</td><td>bad</td><td>GFI</td></tr>
+            <tr><td>big</td><td>GNL</td><td>small</td><td>XRFKUKU</td></tr>
+            <tr><td>hot</td><td>MTY</td><td>cold</td><td>HTKUI</td></tr>
+            <tr><td>new</td><td>SJB</td><td>old</td><td>TKUI</td></tr>
+            <tr><td>fast</td><td>KFXY</td><td>slow</td><td>XKTB</td></tr>
+            <tr><td>happy</td><td>MFUUD</td><td>sad</td><td>XFI</td></tr>
+            <tr><td>easy</td><td>JFXD</td><td>hard</td><td>MFWI</td></tr>
+            <tr><td>beautiful</td><td>GJFZYNKZKU</td><td>ugly</td><td>ZLKUD</td></tr>
+            <tr><td>clean</td><td>HKUJFS</td><td>dirty</td><td>INWYD</td></tr>
+            <tr><td>full</td><td>KZKUKU</td><td>empty</td><td>JRUYD</td></tr>
+        </table>
+
+        <h3>Numbers (1-20)</h3>
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>English</th>
+                <th>Konju</th>
+            </tr>
+            <tr><td>1</td><td>ONE</td><td>TSJ</td></tr>
+            <tr><td>2</td><td>TWO</td><td>YBT</td></tr>
+            <tr><td>3</td><td>THREE</td><td>YMWJJ</td></tr>
+            <tr><td>4</td><td>FOUR</td><td>KTZW</td></tr>
+            <tr><td>5</td><td>FIVE</td><td>KNAJ</td></tr>
+            <tr><td>6</td><td>SIX</td><td>XNC</td></tr>
+            <tr><td>7</td><td>SEVEN</td><td>XJAJS</td></tr>
+            <tr><td>8</td><td>EIGHT</td><td>JNLMY</td></tr>
+            <tr><td>9</td><td>NINE</td><td>SNSJ</td></tr>
+            <tr><td>10</td><td>TEN</td><td>YJS</td></tr>
+            <tr><td>11</td><td>ELEVEN</td><td>JKUJAJS</td></tr>
+            <tr><td>12</td><td>TWELVE</td><td>YBJAKUAJ</td></tr>
+            <tr><td>20</td><td>TWENTY</td><td>YBJSYD</td></tr>
+        </table>
+
+        <h3>Common Phrases</h3>
+        <table>
+            <tr>
+                <th>English</th>
+                <th>Konju</th>
+            </tr>
+            <tr><td>Hello</td><td>MJKUKUT</td></tr>
+            <tr><td>Goodbye</td><td>LTTIGD</td></tr>
+            <tr><td>Thank you</td><td>YMFSP DTZ</td></tr>
+            <tr><td>You're welcome</td><td>DTZ'WJ BJKUHTRJ</td></tr>
+            <tr><td>Please</td><td>UKUJFXJ</td></tr>
+            <tr><td>Sorry</td><td>XTWWD</td></tr>
+            <tr><td>Yes</td><td>DJX</td></tr>
+            <tr><td>No</td><td>ST</td></tr>
+            <tr><td>How are you?</td><td>MTB FWJ DTZ?</td></tr>
+            <tr><td>I'm fine</td><td>N'R KNSJ</td></tr>
+            <tr><td>What is your name?</td><td>BMFY NX DTZW SFRJ?</td></tr>
+            <tr><td>My name is...</td><td>RD SFRJ NX...</td></tr>
+            <tr><td>Nice to meet you</td><td>SNHJ YT RJJY DTZ</td></tr>
         </table>
 
         <hr>
 
-        <h2>6. Example Sentences</h2>
+        <h2 id="practice">✏️ Practice Exercises</h2>
 
-        <h3>Present Tense:</h3>
-        <div class="example">
-            <strong>English:</strong> I eat food<br>
-            <strong>Structure:</strong> I-SUBJECT food-OBJECT eat<br>
-            <strong>Konju:</strong> N-xeu KTTI-y JFY<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <h3>Past Tense:</h3>
-        <div class="example">
-            <strong>English:</strong> I ate food<br>
-            <strong>Structure:</strong> I-SUBJECT food-OBJECT eat-PAST<br>
-            <strong>Konju:</strong> N-xeu KTTI-y JFY-eu<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <h3>Future Tense:</h3>
-        <div class="example">
-            <strong>English:</strong> I will eat food<br>
-            <strong>Structure:</strong> I-SUBJECT food-OBJECT eat-FUTURE<br>
-            <strong>Konju:</strong> N-xeu KTTI-y JFY-yae<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <h3>Plural:</h3>
-        <div class="example">
-            <strong>English:</strong> Cats eat food<br>
-            <strong>Structure:</strong> cat-PLURAL-SUBJECT food-OBJECT eat<br>
-            <strong>Konju:</strong> HFY-i-xeu KTTI-y JFY<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <h3>Possessive:</h3>
-        <div class="example">
-            <strong>English:</strong> My cat is good<br>
-            <strong>Structure:</strong> I-POSSESSIVE cat-SUBJECT good be<br>
-            <strong>Konju:</strong> N-o HFY-xeu LTTI GJ<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <h3>Location:</h3>
-        <div class="example">
-            <strong>English:</strong> I am at home<br>
-            <strong>Structure:</strong> I-SUBJECT home-LOCATION be<br>
-            <strong>Konju:</strong> N-xeu MTZHJ-a GJ<br>
-            <em>(Written in Konju characters)</em>
-        </div>
-
-        <hr>
-
-        <h2>7. Quick Reference</h2>
-
-        <h3>Sentence Pattern:</h3>
-        <code>Subject-xeu Object-y Verb(-tense)</code>
-
-        <h3>Key Particles:</h3>
-        <ul>
-            <li><strong>xeu</strong> = subject marker</li>
-            <li><strong>y</strong> = object marker</li>
-            <li><strong>o</strong> = possessive</li>
-            <li><strong>a</strong> = location</li>
-            <li><strong>eu</strong> = past tense</li>
-            <li><strong>yae</strong> = future tense</li>
-            <li><strong>i</strong> = plural</li>
-        </ul>
-
-        <h3>Cipher Quick Tip:</h3>
-        <div class="note">
-            To convert English to Konju:<br>
-            1. Move each letter forward 5 positions<br>
-            2. A→F, B→G, C→H, D→I, E→J<br>
-            3. V→A, W→B, X→C, Y→D, Z→E (wraps around)<br>
-            4. Q becomes KU<br>
-            5. Write using Konju alphabet
-        </div>
-
-        <hr>
-
-        <h2>8. Practice Exercise</h2>
-
-        <p><strong>Try converting these English sentences to Konju:</strong></p>
-
-        <ol>
-            <li>"The dog sees water"</li>
-            <li>"We speak good"</li>
-            <li>"You ate at home"</li>
-            <li>"They will go"</li>
-        </ol>
-
-        <details>
-            <summary><strong>Click for answers</strong></summary>
-            <div class="example">
+        <div class="practice">
+            <h3>Exercise 1: Cipher Conversion</h3>
+            <p>Convert these English words to Konju:</p>
+            <ol>
+                <li>BOOK</li>
+                <li>HAPPY</li>
+                <li>WINDOW</li>
+                <li>QUESTION</li>
+                <li>LANGUAGE</li>
+            </ol>
+            <details>
+                <summary>Show Answers</summary>
                 <ol>
-                    <li><strong>YMJ ITL-xeu BFYJW-y XJJ</strong> (The dog-SUBJECT water-OBJECT see)</li>
-                    <li><strong>BJ-xeu LTTI XUJFP</strong> (We-SUBJECT good speak)</li>
-                    <li><strong>DTZ-xeu MTZHJ-a JFY-eu</strong> (You-SUBJECT home-LOCATION eat-PAST)</li>
-                    <li><strong>YMJD-xeu LT-yae</strong> (They-SUBJECT go-FUTURE)</li>
+                    <li>BOOK → GTTP</li>
+                    <li>HAPPY → MFUUD</li>
+                    <li>WINDOW → BNSITB</li>
+                    <li>QUESTION → KUZJXYTS</li>
+                    <li>LANGUAGE → KUFSLZFLJ</li>
                 </ol>
-            </div>
-        </details>
+            </details>
+        </div>
+
+        <div class="practice">
+            <h3>Exercise 2: Add Particles</h3>
+            <p>Add the correct particles to these words:</p>
+            <ol>
+                <li>HFY (cat) - as subject</li>
+                <li>KTTI (food) - as object</li>
+                <li>N (I) - possessive</li>
+                <li>MTZHJ (home) - location</li>
+                <li>ITL-i (dogs) - as subject</li>
+            </ol>
+            <details>
+                <summary>Show Answers</summary>
+                <ol>
+                    <li>HFY-xeu</li>
+                    <li>KTTI-y</li>
+                    <li>N-o</li>
+                    <li>MTZHJ-a</li>
+                    <li>ITL-i-xeu</li>
+                </ol>
+            </details>
+        </div>
+
+        <div class="practice">
+            <h3>Exercise 3: Verb Conjugation</h3>
+            <p>Conjugate XJJ (see) in these forms:</p>
+            <ol>
+                <li>Past tense</li>
+                <li>Future tense</li>
+                <li>Progressive (present continuous)</li>
+                <li>Past progressive</li>
+            </ol>
+            <details>
+                <summary>Show Answers</summary>
+                <ol>
+                    <li>XJJ-eu (saw)</li>
+                    <li>XJJ-yae (will see)</li>
+                    <li>XJJ-ju (seeing / is seeing)</li>
+                    <li>XJJ-ju-eu (was seeing)</li>
+                </ol>
+            </details>
+        </div>
+
+        <div class="practice">
+            <h3>Exercise 4: Build Sentences</h3>
+            <p>Translate these sentences to Konju:</p>
+            <ol>
+                <li>"I see the cat"</li>
+                <li>"The dog eats food"</li>
+                <li>"We will go home"</li>
+                <li>"She was reading a book"</li>
+                <li>"My friend speaks Konju"</li>
+            </ol>
+            <details>
+                <summary>Show Answers</summary>
+                <ol>
+                    <li>N-xeu HFY-y XJJ</li>
+                    <li>ITL-xeu KTTI-y JFY</li>
+                    <li>BJ-xeu MTZHJ-a LT-yae</li>
+                    <li>XMJ-xeu GTTP-y WJFI-ju-eu</li>
+                    <li>N-o KWNJSI-xeu PTSOZ-y XUJFP</li>
+                </ol>
+            </details>
+        </div>
+
+        <div class="practice">
+            <h3>Exercise 5: Word Formation</h3>
+            <p>Create new words using prefixes/suffixes:</p>
+            <ol>
+                <li>BWNYJ (write) + person suffix = ?</li>
+                <li>JFY (eat) + place suffix = ?</li>
+                <li>LTTI (good) + opposite prefix = ?</li>
+                <li>LT (go) + again prefix = ?</li>
+                <li>XUJFP (speak) + thing suffix = ?</li>
+            </ol>
+            <details>
+                <summary>Show Answers</summary>
+                <ol>
+                    <li>BWNYJ-ka (writer)</li>
+                    <li>JFY-su (restaurant)</li>
+                    <li>fe-LTTI (bad)</li>
+                    <li>re-LT (go again, return)</li>
+                    <li>XUJFP-lo (speaking tool, microphone)</li>
+                </ol>
+            </details>
+        </div>
 
         <hr>
 
-        <footer style="margin-top: 50px; padding-top: 20px; border-top: 2px solid #ddd; text-align: center; color: #777;">
-            <p><strong>Konju Language</strong> - A Constructed Language Project</p>
+        <h2 id="reference">📖 Quick Reference Guide</h2>
+
+        <div class="quick-ref" style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px; padding: 25px; margin: 30px 0;">
+            
+            <h3>🎯 Core Grammar Pattern</h3>
+            <p style="font-size: 1.3em; text-align: center; background: white; padding: 15px; border-radius: 5px;">
+                <strong>Subject-xeu + (Location-a) + Object-y + Verb(-tense)</strong>
+            </p>
+
+            <h3>📌 Essential Particles Cheat Sheet</h3>
+            <ul style="font-size: 1.1em;">
+                <li><strong>-xeu</strong> = subject marker ("the doer")</li>
+                <li><strong>-y</strong> = object marker ("receiver of action")</li>
+                <li><strong>-o</strong> = possessive ("'s" or "of")</li>
+                <li><strong>-a</strong> = location ("at, in, on")</li>
+                <li><strong>-eu</strong> = past tense ("-ed")</li>
+                <li><strong>-yae</strong> = future tense ("will")</li>
+                <li><strong>-ju</strong> = progressive ("-ing", doing now)</li>
+                <li><strong>-i</strong> = plural ("-s")</li>
+            </ul>
+
+            <h3>🔧 Word Building Tools</h3>
+            <p><strong>Prefixes:</strong></p>
+            <ul>
+                <li><strong>fe-</strong> = opposite, not (fe-LTTI = bad)</li>
+                <li><strong>re-</strong> = again (re-LT = return)</li>
+            </ul>
+            <p><strong>Suffixes:</strong></p>
+            <ul>
+                <li><strong>-ka</strong> = person (JFY-ka = eater)</li>
+                <li><strong>-lo</strong> = thing (XJJ-lo = mirror)</li>
+                <li><strong>-su</strong> = place (JFY-su = restaurant)</li>
+                <li><strong>-zi</strong> = adjective (JFY-zi = edible)</li>
+            </ul>
+
+            <h3>🔤 Cipher Quick Reference</h3>
+            <p><strong>Rule:</strong> English letter + 5 positions = Konju letter</p>
+            <p><strong>Wrap at end:</strong> V→A, W→B, X→C, Y→D, Z→E</p>
+            <p><strong>Special:</strong> Q becomes KU</p>
+
+            <h3>💡 Study Tips</h3>
+            <ol>
+                <li>Master the cipher first - it's the foundation!</li>
+                <li>Learn the 8 particles - they're used in every sentence</li>
+                <li>Practice SOV word order until it feels natural</li>
+                <li>Start with Konju Latin, then learn the script</li>
+                <li>Build vocabulary through word formation</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <footer style="margin-top: 60px; padding-top: 30px; border-top: 3px solid #667eea; text-align: center; color: #777;">
+            <h2 style="color: #667eea;">🎉 Congratulations!</h2>
+            <p style="font-size: 1.2em;">You now have everything you need to learn and speak Konju!</p>
+            <p style="margin-top: 20px;"><strong>Konju Language</strong> - A Constructed Language Project</p>
             <p>Created with geometric design and systematic cipher encoding</p>
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                <strong>MJKUKUT!</strong> (Hello!) | <strong>MFUUD KUJFWSNSL!</strong> (Happy learning!)
+            </p>
         </footer>
     </div>
 </body>
