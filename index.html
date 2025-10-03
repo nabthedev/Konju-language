@@ -270,10 +270,10 @@
             <li>Takes time to master but looks amazing!</li>
         </ul>
 
-        <div class="note">
-            <strong>📷 The Konju Alphabet:</strong><br>
-            <img src="imgs/characters.png" alt="Konju Alphabet" class="alphabet-img">
-        </div>
+ <div class="note">
+    <strong>📷 The Konju Alphabet:</strong><br>
+    <img src="imgs/characters.png" alt="Konju Alphabet" class="alphabet-img">
+</div>
 
         <h3>System 2: Konju Latin (Secondary)</h3>
         <ul>
@@ -361,7 +361,7 @@
 
         <div class="warning">
             <h4>⚠️ Rule 2: Q becomes KU</h4>
-            <p>Since Konju doesn't have Q or W, when you land on Q during the shift, replace it with <strong>KU</strong></p>
+            <p>Since Konju doesn't have Q, when you land on Q during the shift, replace it with <strong>KU</strong></p>
             <p><strong>Example:</strong> HELLO</p>
             <ul>
                 <li>H → M</li>
@@ -373,39 +373,93 @@
             <p><strong>HELLO</strong> = <strong>MJKUKUT</strong></p>
         </div>
 
+        <div class="warning">
+            <h4>⚠️ Rule 3: W becomes V (pronounced "vaeo")</h4>
+            <p>When the original English word has a <strong>W</strong>, it becomes <strong>V</strong> in Konju, but it's pronounced as <strong>"vaeo"</strong> (not just "v")</p>
+            <p><strong>Example:</strong> WATER</p>
+            <ul>
+                <li>W → V (but pronounced "vaeo")</li>
+                <li>A → F</li>
+                <li>T → Y</li>
+                <li>E → J</li>
+                <li>R → W</li>
+            </ul>
+            <p><strong>WATER</strong> = <strong>VFYJW</strong> (pronounced "vaeo-F-Y-J-W")</p>
+            <p><em>Note: This makes W-words distinct in pronunciation!</em></p>
+        </div>
+
+        <div class="warning">
+            <h4>⚠️ Rule 4: Consonant Cluster Simplification</h4>
+            <p>When <strong>3 or more consonants</strong> appear consecutively in a word, they become difficult to pronounce. To fix this:</p>
+            <ul>
+                <li>Find each group of 3+ consecutive consonants</li>
+                <li>Change the <strong>2nd consonant</strong> in that cluster to the next vowel in the alphabet</li>
+                <li>Vowels in Konju: <strong>A, E, I, O, U</strong></li>
+            </ul>
+            
+            <p><strong>Example 1: GHTOB</strong> (from hypothetical word)</p>
+            <ul>
+                <li>Cluster: <strong>G-H-T</strong> (3 consonants)</li>
+                <li>2nd consonant: <strong>H</strong></li>
+                <li>H → next vowel in alphabet → <strong>I</strong> (H-I)</li>
+                <li>Result: <strong>GITOB</strong></li>
+            </ul>
+
+            <p><strong>Example 2: STRFSL</strong> (6 consonants in a row!)</p>
+            <ul>
+                <li><strong>First cluster:</strong> S-T-R (positions 1-3)</li>
+                <li>2nd consonant: <strong>T</strong> → <strong>U</strong></li>
+                <li>Becomes: <strong>SURFSL</strong></li>
+                <li><strong>Second cluster:</strong> F-S-L (positions 4-6)</li>
+                <li>2nd consonant: <strong>S</strong> → <strong>U</strong></li>
+                <li>Final result: <strong>SURFUL</strong></li>
+            </ul>
+
+            <p><strong>Consonant to Vowel Chart:</strong></p>
+            <ul>
+                <li>B,C,D → E</li>
+                <li>F,G,H → I</li>
+                <li>J,K,L,M,N → O</li>
+                <li>P,Q,R,S,T → U</li>
+                <li>V,W,X,Y,Z → A (wraps around)</li>
+            </ul>
+            <p><em>This rule makes Konju words easier to pronounce!</em></p>
+        </div>
+
         <h3>Complete Cipher Reference Table</h3>
         <table>
             <tr>
                 <th>English Letter</th>
                 <th>+5 Shift</th>
                 <th>Konju Letter</th>
+                <th>Pronunciation</th>
             </tr>
-            <tr><td>A</td><td>→</td><td>F</td></tr>
-            <tr><td>B</td><td>→</td><td>G</td></tr>
-            <tr><td>C</td><td>→</td><td>H</td></tr>
-            <tr><td>D</td><td>→</td><td>I</td></tr>
-            <tr><td>E</td><td>→</td><td>J</td></tr>
-            <tr><td>F</td><td>→</td><td>K</td></tr>
-            <tr><td>G</td><td>→</td><td>L</td></tr>
-            <tr><td>H</td><td>→</td><td>M</td></tr>
-            <tr><td>I</td><td>→</td><td>N</td></tr>
-            <tr><td>J</td><td>→</td><td>O</td></tr>
-            <tr><td>K</td><td>→</td><td>P</td></tr>
-            <tr><td>L</td><td>→</td><td>Q → KU</td></tr>
-            <tr><td>M</td><td>→</td><td>R</td></tr>
-            <tr><td>N</td><td>→</td><td>S</td></tr>
-            <tr><td>O</td><td>→</td><td>T</td></tr>
-            <tr><td>P</td><td>→</td><td>U</td></tr>
-            <tr><td>Q</td><td>→</td><td>V → KU</td></tr>
-            <tr><td>R</td><td>→</td><td>W</td></tr>
-            <tr><td>S</td><td>→</td><td>X</td></tr>
-            <tr><td>T</td><td>→</td><td>Y</td></tr>
-            <tr><td>U</td><td>→</td><td>Z</td></tr>
-            <tr><td>V</td><td>→</td><td>A (wraps)</td></tr>
-            <tr><td>W</td><td>→</td><td>B (wraps)</td></tr>
-            <tr><td>X</td><td>→</td><td>C (wraps)</td></tr>
-            <tr><td>Y</td><td>→</td><td>D (wraps)</td></tr>
-            <tr><td>Z</td><td>→</td><td>E (wraps)</td></tr>
+            <tr><td>A</td><td>→</td><td>F</td><td>/f/</td></tr>
+            <tr><td>B</td><td>→</td><td>G</td><td>/g/</td></tr>
+            <tr><td>C</td><td>→</td><td>H</td><td>/h/</td></tr>
+            <tr><td>D</td><td>→</td><td>I</td><td>/i/</td></tr>
+            <tr><td>E</td><td>→</td><td>J</td><td>/j/</td></tr>
+            <tr><td>F</td><td>→</td><td>K</td><td>/k/</td></tr>
+            <tr><td>G</td><td>→</td><td>L</td><td>/l/</td></tr>
+            <tr><td>H</td><td>→</td><td>M</td><td>/m/</td></tr>
+            <tr><td>I</td><td>→</td><td>N</td><td>/n/</td></tr>
+            <tr><td>J</td><td>→</td><td>O</td><td>/o/</td></tr>
+            <tr><td>K</td><td>→</td><td>P</td><td>/p/</td></tr>
+            <tr><td>L</td><td>→</td><td>Q → KU</td><td>/ku/</td></tr>
+            <tr><td>M</td><td>→</td><td>R</td><td>/r/</td></tr>
+            <tr><td>N</td><td>→</td><td>S</td><td>/s/</td></tr>
+            <tr><td>O</td><td>→</td><td>T</td><td>/t/</td></tr>
+            <tr><td>P</td><td>→</td><td>U</td><td>/u/</td></tr>
+            <tr><td>Q</td><td>→</td><td>V → KU</td><td>/ku/</td></tr>
+            <tr><td>R</td><td>→</td><td>W</td><td>/w/</td></tr>
+            <tr><td>S</td><td>→</td><td>X</td><td>/x/</td></tr>
+            <tr><td>T</td><td>→</td><td>Y</td><td>/y/</td></tr>
+            <tr><td>U</td><td>→</td><td>Z</td><td>/z/</td></tr>
+            <tr><td>V</td><td>→</td><td>A (wraps)</td><td>/a/</td></tr>
+            <tr><td>W</td><td>→</td><td>V (wraps)</td><td><strong>/vaeo/</strong></td></tr>
+            <tr><td>X</td><td>→</td><td>C (wraps)</td><td>/c/</td></tr>
+            <tr><td>Y</td><td>→</td><td>D (wraps)</td><td>/d/</td></tr>
+            <tr><td>Z</td><td>→</td><td>E (wraps)</td><td>/e/</td></tr>
         </table>
 
         <h3>Practice Examples with Full Breakdown:</h3>
@@ -427,13 +481,14 @@
             <p><strong>English:</strong> WATER</p>
             <p><strong>Breakdown:</strong></p>
             <ul>
-                <li>W + 5 = B (wraparound: W→X→Y→Z→A→B)</li>
-                <li>A + 5 = F</li>
-                <li>T + 5 = Y</li>
-                <li>E + 5 = J</li>
-                <li>R + 5 = W</li>
+                <li>W → V (pronounced "vaeo")</li>
+                <li>A → F</li>
+                <li>T → Y</li>
+                <li>E → J</li>
+                <li>R → W</li>
             </ul>
-            <p><strong>Konju:</strong> BFYJW</p>
+            <p><strong>Konju:</strong> VFYJW</p>
+            <p><strong>Pronunciation:</strong> "vaeo-F-Y-J-W"</p>
         </div>
 
         <div class="example">
@@ -474,11 +529,15 @@
                         code = (code + 5) % 26;
                         let newChar = String.fromCharCode(code + 65);
                         
-                        if (newChar === 'Q' || newChar === 'V') {
+                        // Special rule: Q becomes KU
+                        if (newChar === 'Q') {
                             result += 'KU';
-                        } else if (newChar === 'W') {
-                            result += 'B';
-                        } else {
+                        }
+                        // Special rule: Original W becomes V (pronounced vaeo)
+                        else if (char === 'W') {
+                            result += 'V';
+                        }
+                        else {
                             result += newChar;
                         }
                     } else if (char === ' ') {
@@ -761,9 +820,9 @@
         <p>Create new words by combining two root words together:</p>
 
         <div class="example">
-            <h4>Pattern: Word1 + Word2 = New Meaning</h4>
+            <p><strong>Pattern: Word1 + Word2 = New Meaning</h4>
             <ul>
-                <li><strong>BFYJW</strong> (water) + <strong>MTZHJ</strong> (home) = <strong>BFYJWMTZHJ</strong> (bathroom)</li>
+                <li><strong>VFYJW</strong> (water) + <strong>MTZHJ</strong> (home) = <strong>VFYJWMTZHJ</strong> (bathroom)</li>
                 <li><strong>XJJ</strong> (see) + <strong>-lo</strong> (thing) = <strong>XJJLO</strong> (mirror, seeing-thing)</li>
                 <li><strong>GNL</strong> (big) + <strong>HFY</strong> (cat) = <strong>GNLHFY</strong> (big cat / lion)</li>
                 <li><strong>XRFKUKU</strong> (small) + <strong>ITL</strong> (dog) = <strong>XRFKUKUITL</strong> (puppy)</li>
@@ -957,7 +1016,7 @@
             <tr><td>man</td><td>RFS</td><td>woman</td><td>BTRF</td></tr>
             <tr><td>child</td><td>HMNKUI</td><td>friend</td><td>KWNJSI</td></tr>
             <tr><td>home</td><td>MTZHJ</td><td>house</td><td>MTZXJ</td></tr>
-            <tr><td>food</td><td>KTTI</td><td>water</td><td>BFYJW</td></tr>
+            <tr><td>food</td><td>KTTI</td><td>water</td><td>VFYJW</td></tr>
             <tr><td>cat</td><td>HFY</td><td>dog</td><td>ITL</td></tr>
             <tr><td>bird</td><td>GNWI</td><td>fish</td><td>KNXM</td></tr>
             <tr><td>tree</td><td>YWJJ</td><td>flower</td><td>KUKTBJW</td></tr>
@@ -1196,6 +1255,7 @@
                 <li>Practice SOV word order until it feels natural</li>
                 <li>Start with Konju Latin, then learn the script</li>
                 <li>Build vocabulary through word formation</li>
+                <li>Remember: Apply consonant cluster rule AFTER ciphering!</li>
             </ol>
         </div>
 
